@@ -1,13 +1,16 @@
 
 import './card.scss'
-import cardImage from '../../resources/card/card_1.png'
 
-const Card = () => {
+
+const Card = ({src, name, country, price}) => {
     return (
         <div className='card'>
-            <img src={cardImage} alt="card" className="card_img" />
-            <h3 className="card_name">Solimo Coffee Beans 2 kg</h3>
-            <div className="card_price">10.73$</div>
+            <img src={src} alt="card" className="card_img" />
+            <h3 className="card_name">{name}</h3>
+            {
+                country ? <h3 className='card_country'>{country}</h3>  : null
+            }
+            <div className="card_price">{price}</div>
         </div>
     )
 }

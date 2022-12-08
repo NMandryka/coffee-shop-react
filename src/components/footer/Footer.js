@@ -1,5 +1,5 @@
 
-import Nav from '../Nav/Nav';
+import Nav from '../nav/Nav';
 import Separator from '../separator/Separator';
 import './footer.scss'
 

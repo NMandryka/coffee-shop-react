@@ -1,12 +1,34 @@
 
-import Nav from "../Nav/Nav";
+import Nav from "../nav/Nav";
 import Separator from "../separator/Separator";
 import Card from "../card/Card";
 import Footer from "../footer/Footer";
+
 import './mainPage.scss'
+import cardImage from '../../resources/card/card_1.png'
+
 
 
 const MainPage = () => {
+    // fetch('http://localhost:3000/our_best')
+    //     .then(data => data.json())
+    //     .then(data => console.log(data))
+        
+
+    const cards = [];
+    for(let i = 0; i < 3; i++) {
+        cards.push(
+            <li 
+                className="card_item">
+                    <Card 
+                    src={cardImage} 
+                    name='Solimo Coffee Beans 2 kg' 
+                    price='10.73$'
+                    key={i+1}/>
+            </li>
+        )
+    }
+
     return (
         <>
             <header>
@@ -34,9 +56,7 @@ const MainPage = () => {
             <section className="our_best">
                 <h2 className="our_best_h2">Our best</h2>
                 <ul className="card_list">
-                    <li className="card_item"><Card/></li>
-                    <li className="card_item"><Card/></li>
-                    <li className="card_item"><Card/></li>
+                    {cards}
                 </ul>
             </section>
             <Footer/>

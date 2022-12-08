@@ -1,0 +1,40 @@
+
+.descr {
+    margin-top: 79px;
+    min-height: 358px;
+    display: flex;
+    &_img {
+        margin: 0 79px 0 391px;
+        
+
+        filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+    }
+    .descr_wrap {
+        display: flex;
+        flex-direction: column;
+    
+        .descr_title {
+            margin: 35px 0 20px 79px;
+            font-family: 'Merienda';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 35px;
+            color: #000000;    
+        }
+    
+        .descr_div {
+            margin-top: 25px;
+            width: 346px;
+            height: 232px;
+            font-family: 'Merienda';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #000000;    
+        }
+    }
+    
+}

@@ -12,18 +12,18 @@ const Nav = ({type}) => {
 
     return (
         <nav>
-            <ul className="nav_ul">
+            <div className="nav_ul">
                 <img src={clazz === 'black' ? coffeeBeensBlack : coffeeBeens} alt="coffee beens" className="nav_img" />
                 <li className="nav_li">
-                    <Link to='/' className={`nav_a ${clazz}`} >Coffee home</Link>
+                    <Link to='/' className={`nav_a ${clazz}`}>Coffee home</Link>
                 </li>
                 <li className="nav_li">
-                    <Link to='our-coffee' className={`nav_a ${clazz}`}>Our coffee</Link>
+                    <Link to='/our-coffee' className={`nav_a ${clazz}`}>Our coffee</Link>
                 </li>
                 <li className="nav_li">
-                    <Link to='for-your-pleasure' className={`nav_a ${clazz}`} >For your pleasure</Link>
+                    <Link to='/for-your-pleasure' className={`nav_a ${clazz}`}>For your pleasure</Link>
                 </li>
-            </ul>
+            </div>
         </nav>
     )
 }
