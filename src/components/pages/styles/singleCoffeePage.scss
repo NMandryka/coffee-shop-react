@@ -1,0 +1,53 @@
+
+header.single_coffee_page {
+    height: 260px;
+    background:  url('../../../resources/bgs/our_coffee_bg.jpg') center center / cover no-repeat;
+}
+
+section.about_it {
+    margin-top: 79px;
+    min-height: 358px;
+    display: flex;
+    justify-content: center;
+
+    .single_coffee_page_img {
+        filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+    }
+
+    .wrap {
+        display: flex;
+        flex-direction: column;
+
+        .descr {
+            width: 418px;
+            font-family: 'Merienda';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000000;    
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .country {
+            font-family: 'Merienda';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000000;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}

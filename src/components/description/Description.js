@@ -5,7 +5,7 @@ import './description.scss'
 const Description = ({src, title, descr}) => {
     return (
         <div className='descr'>
-            <img src={src} alt="coffee image" className="descr_img" />
+            <img src={src} alt="coffee" className="descr_img" />
             <div className="descr_wrap">
                 <h2 className='descr_title'>{title}</h2>
                 <Separator type="black"/>

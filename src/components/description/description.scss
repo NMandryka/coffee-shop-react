@@ -3,10 +3,8 @@
     margin-top: 79px;
     min-height: 358px;
     display: flex;
+    justify-content: center;
     &_img {
-        margin: 0 79px 0 391px;
-        
-
         filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
     }
     .descr_wrap {
@@ -35,6 +33,9 @@
             text-align: center;
             color: #000000;    
         }
+    }
+    .descr_img {
+        margin-right: 84px;
     }
     
 }
