@@ -8,17 +8,15 @@ const MainPage = () => {
     const cards = data.coffeeList.map((item, i) => {
         if(i < 3) {
             return (
-                <li 
-                    className="card_item"
-                    tabIndex={1}>
+                <li className='card_list_item' tabIndex={1} key={item.id}>
                     <Card 
                         src={item.src} 
                         name={item.name}
                         price={item.price}
                         id={item.id}
-                        key={item.id}
                     />
                 </li>
+               
             )
         }
         return null
