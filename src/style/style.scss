@@ -40,4 +40,30 @@ p {
     padding: 0;
 }
 
+.container {
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
 
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media (max-width: 776px) {
+    .container {
+        max-width: none;
+    }
+}

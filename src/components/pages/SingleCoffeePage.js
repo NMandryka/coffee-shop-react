@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import {Page404} from '../pages'
 import {Nav, TagH1, Separator, Footer} from '../index'
 
 import './styles/singleCoffeePage.scss'
@@ -12,16 +13,27 @@ const SingleCoffeePage = () => {
     const [coffeeProps, setCoffeeProps] = useState({})
     const {id} = useParams();
 
+    let readyToLoadPage = false
+    
     useEffect(() => {
         data.coffeeList.forEach(item => {
             if(item.id === +id) {
                 setCoffeeProps(item)
             }
         })
+        readyToLoadPage = true;
     }, [])
     
+    return (
+        <>
+            {JSON.stringify(coffeeProps) === '{}' && readyToLoadPage ? <Page404/> : <View coffeeProps={coffeeProps}/>}
+        </>
+    )
+}
+
+const View = ({coffeeProps}) => {
     const {name, country, description, price} = coffeeProps;
-    
+
     return (
         <>
             <header className='single_coffee_page'>
@@ -42,6 +54,7 @@ const SingleCoffeePage = () => {
             </section>
             <Footer/>
         </>
+        
     )
 }
 

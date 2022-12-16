@@ -19,9 +19,18 @@ const FilterCard = (props) => {
         const country = e.target.textContent
         props.onCountryFilter(country)
 
-        filterBtnsRefs.forEach(btn => btn.classList.remove('active'))
-        e.target.classList.add('active')
+        setActiveClassForBtns(e);
     }  
+
+    const setActiveClassForBtns = e => {
+        if(e.target.classList.contains("active")) {
+            e.target.classList.remove("active")
+            props.onCountryFilter('')
+        } else {
+            filterBtnsRefs.forEach(btn => btn.classList.remove('active'))
+            e.target.classList.add('active')
+        }
+    }
 
     const setFitlerBtnsRefs = (btnRef) => {
         filterBtnsRefs.push(btnRef)

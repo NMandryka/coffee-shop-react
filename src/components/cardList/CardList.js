@@ -8,41 +8,50 @@ const CardList = ({term, countryFilter}) => {
 
     const onUpdateSeacrh = (data, term) => {
 
-        const res = data.filter(item => {
+        return data.filter(item => {
             return item.name.indexOf(term) !== -1
         })
-
-        return res
     }
 
     const onCountryFilter = (data, country) => {
 
-        const res = data.filter(item => {
+        return data.filter(item => {
             if(country === '') return item
 
             return item.country === country;
         })
-
-        return res
     }
 
-    const dataCards = onCountryFilter(onUpdateSeacrh(data.coffeeList, term), countryFilter)
+    let dataCards = []
     
-    const cards = dataCards.map(item => {
-        const {id, ...itemProps} = item
-        return (
-            <li className='card_list_item' tabIndex={1} key={id}>
-                <Card
-                    {...itemProps}
-                    id={id}
-                /> 
-            </li>
-        )
-    })
+    if(term === undefined && countryFilter === undefined) {
+        dataCards = data.coffeeList;
+    } else {
+        dataCards = onCountryFilter(onUpdateSeacrh(data.coffeeList, term), countryFilter)
+    }
+    
+    const createCards = data => {
+        return data.map(item => {
+            const {id, ...itemProps} = item
+            return (
+                <li className='card_list_item' tabIndex={1} key={id}>
+                    <Card
+                        {...itemProps}
+                        id={id}
+                    /> 
+                </li>
+            )
+        })
+    }
+
+    const cards = createCards(dataCards);
+
+    let styleForUl;
+    cards.length === 0 ? styleForUl = {display: 'block'} : styleForUl = null
 
     return (
-        <ul className="card_list">
-            {cards}
+        <ul className="card_list" style={styleForUl}>
+            {cards.length === 0 ? <h2 className="has_no_cards">There is no cards with this filter</h2> : cards}
         </ul>
     )
 }

@@ -1,7 +1,8 @@
 header {
     background:  url('../../../resources/bgs/main_bg.jpg') center center / cover no-repeat;
     width: 100%;
-    height: 640px;
+    min-height: 640px;
+    padding-bottom: 50px;
     .header_h2 {
         margin-bottom: 20px;
         text-align: center;
@@ -25,7 +26,6 @@ header {
         border: #FFFFFF 1px solid;
         border-radius: 2px;
         background-color: transparent;
-
         font-family: 'Merienda';
         font-style: normal;
         font-weight: 700;
@@ -43,7 +43,7 @@ header {
 
 section.about_us {
     min-height: 520px;
-
+    padding: 0 15px;
     .about_us_h2 {
         margin-top: 80px;
         text-align: center;
@@ -57,7 +57,7 @@ section.about_us {
     }
 
     .about_us_p {
-        width: 589px;
+        max-width: 589px;
         margin: 0 auto;
         text-align: center;
         margin-top: 40px;
@@ -94,19 +94,13 @@ section.our_best {
         align-items: center;
         margin-bottom: 110px;
         
-        &_item {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 8px;
-            width: 220px;
-            height: 260px;
-            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
-            cursor: pointer;
-        }
     }
 }
 
-.container {
-    width: 1440px;
-    margin: 0 auto;
-    position: relative;
+@media (max-width: 800px) {
+    .card_list {
+        flex-direction: column;
+        padding-bottom: 60px;
+        
+    }
 }

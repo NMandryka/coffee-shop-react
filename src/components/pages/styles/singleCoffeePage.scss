@@ -25,7 +25,7 @@ section.about_it {
 
         .descr_about_it {
             margin-top: 16px;
-            width: 418px;
+            max-width: 418px;
             font-family: 'Merienda';
             font-style: normal;
             font-weight: 400;
@@ -80,8 +80,56 @@ section.about_it {
     }
 }
 
-.container {
-    width: 1440px;
-    margin: 0 auto;
-    position: relative;
+@media (max-width: 1200px) {
+    section.about_it {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .single_coffee_page_img {
+            max-width: 392px;
+            max-height: 355px;
+            margin: 0;
+        }
+
+        .wrap {
+            .descr_about_it {
+                max-width: 418px;
+                font-size: 18px;
+                margin: 0 auto;
+
+            }
+
+            .title {
+                text-align: center;
+                margin-top: 35px;
+            }
+    
+            .country {
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 18px;
+                
+            }
+    
+            .price_about_it {
+                margin-top: 16px;
+                text-align: center;
+                span.price {
+                    font-size: 30px;
+                }
+                span.price_word {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .single_coffee_page_img {
+        max-width: 300px;
+        max-height: 285px;
+        margin: 0;
+    }
 }

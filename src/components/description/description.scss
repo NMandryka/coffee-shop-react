@@ -23,8 +23,8 @@
     
         .descr_div {
             margin-top: 25px;
-            width: 346px;
-            height: 232px;
+            max-width: 346px;
+            min-height: 232px;
             font-family: 'Merienda';
             font-style: normal;
             font-weight: 400;
@@ -38,4 +38,28 @@
         margin-right: 84px;
     }
     
+}
+
+@media (max-width: 800px) {
+    .descr { 
+        flex-direction: column;
+        align-items: center;
+
+        .descr_img {
+            margin: 0 auto;
+            width: 400px;
+            height: 500px;
+        }
+    }
+}
+
+@media (max-width: 450px) { 
+    .descr { 
+
+        .descr_img {
+            margin: 0 auto;
+            width: 300px;
+            height: 400px;
+        }
+    }
 }

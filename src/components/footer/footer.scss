@@ -7,3 +7,39 @@ footer {
         margin: 0 120px 30px 0;
     }
 }
+
+@media (max-width: 600px) {
+    nav {
+        padding-left: 40px;
+
+        .nav_ul {
+
+            .nav_li {
+    
+                .nav_a {
+   
+                    font-size: 14px;
+                }
+            }
+            
+        }
+    }
+}
+@media (max-width: 470px) {
+    nav {
+
+        .nav_ul {
+            flex-direction: column;
+            margin-left: 30px;
+            .nav_li {
+    
+                .nav_a {
+                    padding-top: 10px;
+                    font-size: 22px;
+                }
+            }
+            
+        }
+    }
+    
+}

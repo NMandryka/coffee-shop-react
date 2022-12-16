@@ -1,15 +1,10 @@
 header.ourCoffeePage {
-    height: 260px;
+    max-height: 260px;
     background:  url('../../../resources/bgs/our_coffee_bg.jpg') center center / cover no-repeat;
 
 }
 
 section.about_our_beans {
-    height: 1232px;
+    min-height: 1232px;
 }
 
-.container {
-    width: 1440px;
-    margin: 0 auto;
-    position: relative;
-}

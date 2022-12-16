@@ -25,3 +25,28 @@ nav {
 
     }
 }
+
+@media (max-width: 600px) {
+    nav {
+        padding-left: 40px;
+
+    }
+}
+@media (max-width: 470px) {
+    nav {
+
+        .nav_ul {
+            flex-direction: column;
+    
+            .nav_li {
+    
+                .nav_a {
+                    padding-top: 10px;
+                    font-size: 22px;
+                }
+            }
+            
+        }
+    }
+    
+}
